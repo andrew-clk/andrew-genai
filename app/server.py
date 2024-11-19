@@ -100,6 +100,11 @@ async def redirect_root_to_docs() -> RedirectResponse:
     return RedirectResponse("/docs")
 
 
+# @app.get("/")
+# async def root() -> dict:
+#    """Serve a simple welcome message for public testing."""
+#    return {"message": "Welcome to the Sample Chatbot Application!"}
+
 @app.post("/feedback")
 async def collect_feedback(feedback_dict: Feedback) -> None:
     """Collect and log feedback."""
